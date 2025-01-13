@@ -9,8 +9,21 @@ document.addEventListener('DOMContentLoaded',function(){
     form.addEventListener('submit',(event)=>{
         event.preventDefault();
         var actionUrl = form.getAttribute('action')
-        var formData = new FormData(form);
-        alert("Здравствуйте",formData.get('surname'),
-        formData.get('name'))
+        function greeting_1(){
+            var formData = new FormData(form);
+            alert("Здравствуйте",formData.get('surname'),
+            formData.get('name'))
+            console.log("surname=",formData.get('surname'))
+            console.log("name=",formData.get('name'))
+        } //функция не работает
+        function greeting_2(){
+            const surname = document.getElementById('surname').value;
+            const name = document.getElementById('name').value;
+            alert("Здравствуйте"+surname+" "+name)
+            console.log("surname=",surname)
+            console.log("name=",name)
+        } //функция работает
+        greeting_1(); setTimeout(greeting_2,2000)
+        
     })
 })

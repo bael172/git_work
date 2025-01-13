@@ -1,0 +1,17 @@
+form{
+    display:flex;
+    flex-flow:column nowrap;
+}
+form>*{
+    max-width: 30em;
+}
+label{
+    margin-block-start: 1em;
+}
+label:first-child{
+    margin-block-start: 0em;
+}
+button{
+    margin-block-start: 1em;
+}
+    
