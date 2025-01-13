@@ -4,3 +4,13 @@ function odd_even(number){
     else return(number+" это нечётное число")
 }
 console.log(odd_even(4))
+document.addEventListener('DOMContentLoaded',function(){
+    var form = document.querySelector('#idForm');
+    form.addEventListener('submit',(event)=>{
+        event.preventDefault();
+        var actionUrl = form.getAttribute('action')
+        var formData = new FormData(form);
+        alert("Здравствуйте",formData.get('surname'),
+        formData.get('name'))
+    })
+})
